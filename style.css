@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    font-family: ubuntu;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 50vh;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.display {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.buttons button {
+    flex-basis: 25%;
+    border-radius: 50px;
+}
