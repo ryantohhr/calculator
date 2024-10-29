@@ -33,6 +33,7 @@ let firstOperand = "";
 let secondOperand = "";
 let operator = null;
 let sign = "positive";
+let currentOperand = "";
 construct();
 
 function construct() {
@@ -65,17 +66,31 @@ function construct() {
                 
             }
             else if (button.classList.contains("decimal")) {
-
+                if (currentOperand === "first" && !firstOperand.includes(".")) {
+                    firstOperand += ".";
+                }
+                else if (currentOperand === "second" && !secondOperand.includes(".")) {
+                    secondOperand += ".";
+                }
             }
             else if (button.classList.contains("equals")) {
-                firstOperand = Number(firstOperand);
-                secondOperand = Number(secondOperand);
-                firstOperand = operate(firstOperand, secondOperand, operator);
-                operator = "";
-                secondOperand = "";
+                if (secondOperand) {
+                    firstOperand = Number(firstOperand);
+                    secondOperand = Number(secondOperand);
+                    firstOperand = operate(firstOperand, secondOperand, operator);
+                    operator = "";
+                    secondOperand = "";
+                }
             }
             else if (button.classList.contains("sign")) {
                 switchSign();
+            }
+
+            if (operator) {
+                currentOperand = "second";
+            }
+            else {
+                currentOperand = "first";
             }
             display.textContent = updateDisplay();
         })
