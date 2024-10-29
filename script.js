@@ -52,7 +52,20 @@ function construct() {
                 secondOperand = "";
             }
             else if (button.classList.contains("operator")) {
+                if (operator) {
+                    firstOperand = Number(firstOperand);
+                    secondOperand = Number(secondOperand);
+                    firstOperand = operate(firstOperand, secondOperand, operator);
+                    operator = "";
+                    secondOperand = "";
+                }
                 operator = button.value;
+            }
+            else if (button.classList.contains("percent")) {
+                
+            }
+            else if (button.classList.contains("decimal")) {
+
             }
             else if (button.classList.contains("equals")) {
                 firstOperand = Number(firstOperand);
