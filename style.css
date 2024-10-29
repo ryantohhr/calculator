@@ -26,6 +26,7 @@ body {
     justify-content: flex-end;
     align-items: flex-end;
     padding: 15px;
+    min-height: 77px;
     background-color: #a6abb3;
     border: solid black;
     margin-bottom: 5px;
