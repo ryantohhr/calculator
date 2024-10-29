@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: ubuntu;
+    font-family: ubuntu, sans-serif;
 }
 
 body {
@@ -44,4 +44,12 @@ body {
     flex-basis: 25%;
     border-radius: 8px;
     font-size: 25px;
+}
+
+.buttons .clear {
+    flex-basis: 50%;
+}
+
+.buttons .delete {
+    flex-basis: 50%;
 }
